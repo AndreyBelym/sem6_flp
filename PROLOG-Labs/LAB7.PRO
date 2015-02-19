@@ -1,0 +1,9 @@
+trace
+domains
+ names=symbol*
+predicates
+ del(symbol,names,names)
+clauses
+ del(_,[],[]):-!.
+ del(H,[H|T],T):-!.
+ del(El,[H1|T1],[H1|T2]):-del(El,T1,T2).

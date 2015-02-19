@@ -1,0 +1,18 @@
+predicates
+ man(symbol)
+ woman(symbol)
+ parent(symbol,symbol)
+ grandmother(symbol,symbol)
+clauses
+ woman(a).
+ woman(c).
+ woman(e).
+ man(b).
+ man(d).
+ parent(a,c).
+ parent(b,c).
+ parent(c,e).
+ parent(d,e).
+ grandmother(X,Z):-woman(X),
+ 		   parent(Y,Z),
+ 		   parent(X,Y).

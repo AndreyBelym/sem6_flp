@@ -1,0 +1,9 @@
+domains
+ list=symbol*
+predicates
+ write_even_elems(list)
+clauses
+ write_even_elems([]).
+ write_even_elems([_]).
+ write_even_elems([_,Head2|Tail2]):-
+ 	write(Head2),nl,write_even_elems(Tail2).
